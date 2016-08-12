@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F73C81D61D5E535700C5D52F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F73C81D51D5E535700C5D52F /* main.c */; };
+		F73C81DE1D5E5A1600C5D52F /* mad-lib enums.c in Sources */ = {isa = PBXBuildFile; fileRef = F73C81DC1D5E5A1600C5D52F /* mad-lib enums.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		F73C81D21D5E535700C5D52F /* Small mad-lib game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Small mad-lib game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73C81D51D5E535700C5D52F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F73C81DC1D5E5A1600C5D52F /* mad-lib enums.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mad-lib enums.c"; sourceTree = "<group>"; };
+		F73C81DD1D5E5A1600C5D52F /* mad-lib enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mad-lib enums.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F73C81D51D5E535700C5D52F /* main.c */,
+				F73C81DC1D5E5A1600C5D52F /* mad-lib enums.c */,
+				F73C81DD1D5E5A1600C5D52F /* mad-lib enums.h */,
 			);
 			path = "Small mad-lib game";
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73C81DE1D5E5A1600C5D52F /* mad-lib enums.c in Sources */,
 				F73C81D61D5E535700C5D52F /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
