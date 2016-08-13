@@ -8,8 +8,27 @@
 
 #include "mad-lib enums.h"
 
-char *AdjectivesGetStringName(Adjectives input1) {
+char *AdjGetStringName(Adj input1) {
     switch (input1) {
+        case AdjScary: {
+            return "scary";
+        }
+        case AdjFluffy: {
+            return "fluffy";
+        }
+        case AdjFlatulent: {
+            return "flatulent";
+        }
+        case AdjTired: {
+            return "tired";
+        }
+        default: {
+            return NULL;
+        }
+    }
+} /*
+char *NounsGetStringName(Nouns input2) {
+    switch (input2) {
         case scary: {
             return "scary";
         }
@@ -26,4 +45,4 @@ char *AdjectivesGetStringName(Adjectives input1) {
             return NULL;
         }
     }
-}
+}*/

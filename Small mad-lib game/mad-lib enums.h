@@ -12,20 +12,20 @@
 #include <stdio.h>
 #include <limits.h>
 
-typedef enum Adjectives {
-    scary = 1,
-    fluffy,
-    flatulent,
-    tired,
-    AjdNull = INT_MIN,
-    AdjFirst = scary,
-    AdjLast = tired
+typedef enum Adj {
+    AdjScary = 1,
+    AdjFluffy,
+    AdjFlatulent,
+    AdjTired,
+    AdjNull = INT_MIN,
+    AdjFirst = AdjScary,
+    AdjLast = AdjTired
     
-} Adjectives;
+} Adj;
 
-char *AdjectivesGetStringName (Adjectives adjectives);
+char *AdjGetStringName (Adj adj);
 
-
+/*
 typedef enum Nouns {
     puppy = 1,
     pillow,
@@ -51,5 +51,5 @@ typedef enum Verbs {
 } Verbs;
 
 char *VerbsGetStringName (Verbs verbs);
-
+*/
 #endif /* mad_lib_enums_h */
