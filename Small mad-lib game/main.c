@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
         fpurge(stdin);
         printf("please enter:\n");
         printf("    %d for scary\n", AdjScary);
-        printf("    %d for fluffy\n", AdjFluffy);
+        printf("    %d for dangerous\n", AdjDangerous);
         printf("    %d for flatulent\n", AdjFlatulent);
         printf("    %d for tired\n", AdjTired);
         firstNumberOfItemsScanned = scanf("%d", &adjChosen);
@@ -66,7 +66,7 @@ int main(int argc, const char * argv[]) {
            (verbChosen < VerbsFirst) || (verbChosen > VerbsLast)) {
         fpurge(stdin);
         printf("please enter:\n");
-        printf("    %d for fly\n", VerbFly);
+        printf("    %d for eat\n", VerbEat);
         printf("    %d for run\n", VerbRun);
         printf("    %d for destroy\n", VerbDestroy);
         printf("    %d for investigate\n", VerbInvestigate);
@@ -75,8 +75,9 @@ int main(int argc, const char * argv[]) {
     }
     char *verbAsString = VerbsGetStringName(verbChosen);
     printf("You chose the adjective '%s,' the noun '%s,' and the verb '%s.'\n\n", adjAsString, nounAsString, verbAsString);
-    
     printf("One day, %s was so excited because %s had just gotten a new %s.\n\n", name, name, nounAsString);
+    printf("%s looked at the %s and thought it looked a bit %s.\n\n", name, nounAsString, adjAsString);
+    printf("%s realized that with the new %s, %s would be able to %s the world!\n\n", name, nounAsString, name, verbAsString);
     
     return 0;
 }
@@ -87,7 +88,6 @@ int getUserName(char name[], char *prompt) {
         printf("%s", prompt);
         numberOfItemsScanned = scanf("%[^\n]s", name);
     }
-    
     return numberOfItemsScanned;
 }
 

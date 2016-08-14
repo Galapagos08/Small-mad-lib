@@ -13,8 +13,8 @@ char *AdjGetStringName(Adj input1) {
         case AdjScary: {
             return "scary";
         }
-        case AdjFluffy: {
-            return "fluffy";
+        case AdjDangerous: {
+            return "dangerous";
         }
         case AdjFlatulent: {
             return "flatulent";
@@ -48,8 +48,8 @@ char *NounsGetStringName(Nouns input2) {
 }
 char *VerbsGetStringName(Verbs input3) {
     switch (input3) {
-        case VerbFly: {
-            return "fly";
+        case VerbEat: {
+            return "eat";
         }
         case VerbRun: {
             return "run";
@@ -58,7 +58,7 @@ char *VerbsGetStringName(Verbs input3) {
             return "destroy";
         }
         case VerbInvestigate: {
-            return "laptop";
+            return "investigate";
         }
         case VerbProgram: {
             return "program";

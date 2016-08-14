@@ -14,7 +14,7 @@
 
 typedef enum Adj {
     AdjScary = 1,
-    AdjFluffy,
+    AdjDangerous,
     AdjFlatulent,
     AdjTired,
     AdjNull = INT_MIN,
@@ -40,13 +40,13 @@ typedef enum Nouns {
 char *NounsGetStringName (Nouns nouns);
 
 typedef enum Verbs {
-    VerbFly,
-    VerbDestroy,
+    VerbEat =1 ,
     VerbRun,
+    VerbDestroy,
     VerbInvestigate,
     VerbProgram,
     VerbsNull = INT_MIN,
-    VerbsFirst = VerbFly,
+    VerbsFirst = VerbEat,
     VerbsLast = VerbProgram
 } Verbs;
 
