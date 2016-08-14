@@ -25,31 +25,31 @@ typedef enum Adj {
 
 char *AdjGetStringName (Adj adj);
 
-/*
+
 typedef enum Nouns {
-    puppy = 1,
-    pillow,
-    notebook,
-    laptop,
+    NounPuppy = 1,
+    NounPillow,
+    NounNotebook,
+    NounLaptop,
     NounsNull = INT_MIN,
-    NounsFirst = puppy,
-    NounsLast = laptop
+    NounsFirst = NounPuppy,
+    NounsLast = NounLaptop
     
 } Nouns;
 
 char *NounsGetStringName (Nouns nouns);
 
 typedef enum Verbs {
-    fly,
-    destroy,
-    run,
-    investigate,
-    program,
+    VerbFly,
+    VerbDestroy,
+    VerbRun,
+    VerbInvestigate,
+    VerbProgram,
     VerbsNull = INT_MIN,
-    VerbsFirst = fly,
-    VerbsLast = program
+    VerbsFirst = VerbFly,
+    VerbsLast = VerbProgram
 } Verbs;
 
 char *VerbsGetStringName (Verbs verbs);
-*/
+
 #endif /* mad_lib_enums_h */

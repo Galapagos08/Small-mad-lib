@@ -30,7 +30,23 @@ int main(int argc, const char * argv[]) {
     char *adjAsString = AdjGetStringName(adjChosen);
     printf("You chose the adjective %s\n\n", adjAsString);
     
+    printf("Please choose a noun:\n\n");
     
+    Nouns nounChosen = NounsNull;
+    int secondNumberOfItemsScanned = 0;
+    
+    while ((secondNumberOfItemsScanned != 1) ||
+           (nounChosen < NounsFirst) || (nounChosen > NounsLast)) {
+        fpurge(stdin);
+        printf("please enter:\n");
+        printf("    %d for puppy\n", NounPuppy);
+        printf("    %d for pillow\n", NounPillow);
+        printf("    %d for notebook\n", NounNotebook);
+        printf("    %d for laptop\n", NounLaptop);
+        secondNumberOfItemsScanned = scanf("%d", &nounChosen);
+    }
+    char *nounAsString = NounsGetStringName(nounChosen);
+    printf("You chose the noun %s\n\n", nounAsString);
     
     return 0;
 }

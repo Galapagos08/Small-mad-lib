@@ -26,23 +26,45 @@ char *AdjGetStringName(Adj input1) {
             return NULL;
         }
     }
-} /*
+} 
 char *NounsGetStringName(Nouns input2) {
     switch (input2) {
-        case scary: {
-            return "scary";
+        case NounPuppy: {
+            return "puppy";
         }
-        case fluffy: {
-            return "fluffy";
+        case NounPillow: {
+            return "pillow";
         }
-        case flatulent: {
-            return "flatulent";
+        case NounNotebook: {
+            return "notebook";
         }
-        case tired: {
-            return "tired";
+        case NounLaptop: {
+            return "laptop";
         }
         default: {
             return NULL;
         }
     }
-}*/
+}
+char *VerbsGetStringName(Verbs input3) {
+    switch (input3) {
+        case VerbFly: {
+            return "fly";
+        }
+        case VerbRun: {
+            return "run";
+        }
+        case VerbDestroy: {
+            return "destroy";
+        }
+        case VerbInvestigate: {
+            return "laptop";
+        }
+        case VerbProgram: {
+            return "program";
+        }
+        default: {
+            return NULL;
+        }
+    }
+}
