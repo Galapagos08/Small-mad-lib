@@ -47,6 +47,27 @@ int main(int argc, const char * argv[]) {
     }
     char *nounAsString = NounsGetStringName(nounChosen);
     printf("You chose the noun %s\n\n", nounAsString);
+   
+    
+    printf("Please choose a verb:\n\n");
+    
+    Verbs verbChosen = VerbsNull;
+    int thirdNumberOfItemsScanned = 0;
+    
+    while ((thirdNumberOfItemsScanned != 1) ||
+           (verbChosen < VerbsFirst) || (verbChosen > VerbsLast)) {
+        fpurge(stdin);
+        printf("please enter:\n");
+        printf("    %d for fly\n", VerbFly);
+        printf("    %d for run\n", VerbRun);
+        printf("    %d for destroy\n", VerbDestroy);
+        printf("    %d for investigate\n", VerbInvestigate);
+        printf("    %d for program\n", VerbProgram);
+        thirdNumberOfItemsScanned = scanf("%d", &verbChosen);
+    }
+    char *verbAsString = VerbsGetStringName(verbChosen);
+    printf("You chose the verb %s\n\n", verbAsString);
+    
     
     return 0;
 }
