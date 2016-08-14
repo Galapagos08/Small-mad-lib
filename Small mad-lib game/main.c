@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
         printf("please enter:\n");
         printf("    %d for scary\n", AdjScary);
         printf("    %d for fluffy\n", AdjFluffy);
-        printf("    %d for fltulent\n", AdjFlatulent);
+        printf("    %d for flatulent\n", AdjFlatulent);
         printf("    %d for tired\n", AdjTired);
         numberOfItemsScanned = scanf("%d", &adjChosen);
     }
@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
     char *adjAsString = AdjGetStringName(adjChosen);
     printf("You chose the adjective %s\n\n", adjAsString);
     
-    printf("Please choose a noun:\n\n");
+    printf("Next, pease choose a noun:\n\n");
     
     Nouns nounChosen = NounsNull;
     int secondNumberOfItemsScanned = 0;
@@ -46,10 +46,9 @@ int main(int argc, const char * argv[]) {
         secondNumberOfItemsScanned = scanf("%d", &nounChosen);
     }
     char *nounAsString = NounsGetStringName(nounChosen);
-    printf("You chose the noun %s\n\n", nounAsString);
    
     
-    printf("Please choose a verb:\n\n");
+    printf("Lastly, pease choose a verb:\n\n");
     
     Verbs verbChosen = VerbsNull;
     int thirdNumberOfItemsScanned = 0;
@@ -66,7 +65,7 @@ int main(int argc, const char * argv[]) {
         thirdNumberOfItemsScanned = scanf("%d", &verbChosen);
     }
     char *verbAsString = VerbsGetStringName(verbChosen);
-    printf("You chose the verb %s\n\n", verbAsString);
+    printf("You chose the adjective '%s,' the noun '%s,' and the verb '%s.'\n\n", adjAsString, nounAsString, verbAsString);
     
     
     return 0;
