@@ -9,14 +9,24 @@
 #include <stdio.h>
 #include "mad-lib enums.h"
 
+int getUserName(char name[], char *prompt);
+
+
 int main(int argc, const char * argv[]) {
+    
+    char name[100] = "\0";
+    
+    int numberOfItemsScanned = 0;
+    while (numberOfItemsScanned != 1) {
+        numberOfItemsScanned = getUserName(name, "Please enter your name:\n\n");
+    }
     
     printf("Please choose an adjective:\n\n");
     
     Adj adjChosen = AdjNull;
-    int numberOfItemsScanned = 0;
+    int firstNumberOfItemsScanned = 0;
     
-    while ((numberOfItemsScanned != 1) ||
+    while ((firstNumberOfItemsScanned != 1) ||
            (adjChosen < AdjFirst) || (adjChosen > AdjLast)) {
         fpurge(stdin);
         printf("please enter:\n");
@@ -24,11 +34,10 @@ int main(int argc, const char * argv[]) {
         printf("    %d for fluffy\n", AdjFluffy);
         printf("    %d for flatulent\n", AdjFlatulent);
         printf("    %d for tired\n", AdjTired);
-        numberOfItemsScanned = scanf("%d", &adjChosen);
+        firstNumberOfItemsScanned = scanf("%d", &adjChosen);
     }
     
     char *adjAsString = AdjGetStringName(adjChosen);
-    printf("You chose the adjective %s\n\n", adjAsString);
     
     printf("Next, pease choose a noun:\n\n");
     
@@ -67,6 +76,18 @@ int main(int argc, const char * argv[]) {
     char *verbAsString = VerbsGetStringName(verbChosen);
     printf("You chose the adjective '%s,' the noun '%s,' and the verb '%s.'\n\n", adjAsString, nounAsString, verbAsString);
     
+    printf("One day, %s was so excited because %s had just gotten a new %s.\n\n", name, name, nounAsString);
     
     return 0;
 }
+int getUserName(char name[], char *prompt) {
+    int numberOfItemsScanned = 0;
+    while (numberOfItemsScanned != 1) {
+        fpurge(stdin);
+        printf("%s", prompt);
+        numberOfItemsScanned = scanf("%[^\n]s", name);
+    }
+    
+    return numberOfItemsScanned;
+}
+
